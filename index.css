@@ -1,3 +1,76 @@
-h1{
-    color:aquamarine;
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+}
+
+#navbar {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    position: fixed;
+    background-color: cornflowerblue;
+}
+.navlist{
+    display: flex;
+    list-style: none;
+}
+.navlist a {
+    display: block;
+    font-size: 1.5em;
+    padding: .75em .5em;
+}
+
+.navlist a:hover{
+    background-color:darkgreen;
+}
+
+#welcome-section{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgp(22, 10, 85);
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+}
+
+#projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+figure{
+    margin: 1em;
+}
+
+figcaption{
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media (max-width: 1200px) {
+    html {
+        font-size:100%;
+    }
+}
+
+@media (max-width: 980px) {
+    hmtl {
+        font-size: 80%;
+    }
+}
+@media (max-width: 460px) {
+    html{
+        font-size: 60%;
+    }
 }
