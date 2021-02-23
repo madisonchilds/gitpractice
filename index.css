@@ -59,12 +59,12 @@ body{
     height: 700px;
 }
 
-.project-title {
+.project-tile {
     margin: 1em;
 }
 
-.project-title:hover{
-    color: #aaa;
+.project-tile:hover{
+    color: #77C3F2;
 }
 
 figure{
@@ -73,6 +73,7 @@ figure{
 
 figcaption{
     text-align: center;
+    color: white;
 }
 
 figcaption > span{
