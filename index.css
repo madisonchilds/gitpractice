@@ -62,7 +62,6 @@ body{
     justify-content: space-evenly;
     align-items: center;
     background-color: var(--gray);
-    height: 1500px;
 }
 
 .project-tile {
