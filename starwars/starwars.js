@@ -1,6 +1,5 @@
 import { films } from'../data/films.js'
 
-/*test*/
 let filmList = document.querySelector('#filmList')
 
 
