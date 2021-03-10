@@ -3,7 +3,7 @@ import { films } from'../data/films.js'
 let filmList = document.querySelector('#filmList')
 
 
-for (let i = 0; < films.length; i++) {
+for (let i = 0; i < films.length; i++) {
 
     const foundFilm = films.find(film => getLastNumber(film.url) === (i + 1).toString())
     let posterFig = document.createElement('figure')
