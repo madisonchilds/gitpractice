@@ -5,15 +5,18 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="/films/style.css" rel="stylesheet"/>
+        <script type="text/javascript" src="characters.js"></script>
         <title>Star Wars Characters</title>
     </head>
     <body>
         <header>Star Wars Films</header>
-        
+        <div id="buttons">
+            <input type="button" onclick="getCharacters()" value="Male Characters">
+            <button onclick="getCharacters()">Female Characters</button>
+            <button onclick="getCharacters('none')">Other Characters</button>
+        </div>
         <main id='characterList'>
         </main>
-        <script src="characters.js" type="module">
-            
-        </script>
+        
     </body>
 </html>
