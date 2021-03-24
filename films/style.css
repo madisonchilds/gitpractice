@@ -7,6 +7,17 @@
     flex-wrap: wrap;
 }
 
+#characterList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#vehicleList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
 body {
     background-color: black;
     color: white;
