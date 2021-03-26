@@ -22,11 +22,12 @@ function populateNav(vehicles) {
     vehicles.forEach((vehicle) => {
         let anchorWrap = document.createElement('a')
         anchorWrap.href = '#'
-        anchorWrap.addEventListener('click', () => populateShipView(vehicle))
+        anchorWrap.addEventListener('click', () => populateVehicleView(vehicle))
         let listItem = document.createElement('li')
         console.log(`mmc: ${vehicle.name}`)
         listItem.textContent = vehicle.name
 
+        console.log(`mmc: ${anchorwrap}`)
         anchorWrap.appendChild(listItem)
         navList.appendChild(anchorWrap)
     })
@@ -78,7 +79,7 @@ addStarField(document.querySelector('body'), 1000)
         return url.substring(beginning + 1, end)
     }
 
-    export function removeChildren(container) {
+    function removeChildren(container) {
         while (container.firstChild) {
         container.removeChild(container.firstChild)
         }
