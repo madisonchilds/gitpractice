@@ -27,7 +27,8 @@ function populateNav(vehicles) {
         console.log(`mmc: ${vehicle.name}`)
         listItem.textContent = vehicle.name
 
-        console.log(`mmc: ${anchorwrap}`)
+        console.log(`mmc: anchorWrap ${anchorWrap}`)
+        console.log(`mmc: listItem ${listItem}`)
         anchorWrap.appendChild(listItem)
         navList.appendChild(anchorWrap)
     })
