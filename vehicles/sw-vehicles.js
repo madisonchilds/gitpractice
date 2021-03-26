@@ -1,29 +1,71 @@
 import { vehicles } from'../data/vehicles.js'
 
-let vehicleList = document.querySelector('#vehicleList')
+console.log(vehicles.length)
 
-for (let i = 0; i <= vehicles.length; i++) {
-    const foundVehicles = vehicles.find(vehicles => getLastNumber(vehicles.url) === (i + 1).toString())
+const nav = document.querySelector('nav')
+const navList = document.querySelector('.navList')
+const vehicleView = document.querySelector('.vehicleView')
     
-    try{
-        let posterFig = document.createElement('figure')
-        let figImg = document.createElement('img')
-        figImg.src = `https://starwars-visualguide.com/assets/img/vehicles/` + (i + 1) + `.jpg`
-        let figCaption = document.createElement('figcaption')
+    function populateNav(vehicles) {
+        vehicles.forEach((vehicle) => {
+            let anchorWrap = document.createElement('a')
+            anchorWrap.href = '#'
+            anchorWrap.addEventListener('click', () => getVehicles(vehicles))
+            let listItem = document.createElement('li')
+            listItem.textContent = vehicles.name
     
-        figCaption.textContent = foundVehicles.name
-        posterFig.appendChild(figImg)
-        posterFig.appendChild(figCaption)
-    
-        vehicleList.appendChild(posterFig)
-    } catch {
-        ;
+            anchorWrap.appendChild(listItem)
+            navList.appendChild(anchorWrap)
+        })
     }
 
-}
+    function getVehicles(vehicleData) {
+        removeChildren(vehicleView)
+        let vehicleNum = getLastNumber(vehicleData.url)
+        let figImg = document.createElement('img')
+        figImg.src = `https://starwars-visualguide.com/assets/img/vehicles/${charNum}.jpg`
+        figImg.addEventListener('error', (err) => {
+            console.log(`Oops! This image doesn't exist.`)
+            vehicleImage.hidden = true
+        })
+        vehicleView.appendChild(figImg)
+    }
+
+    function addStarField(element, numStars) {
+        element.style.setProperty('background-color', '#000')
+        for (let i = 0; i < numStars; i++) {
+            let star = document.createElement('div')
+            star.style.setProperty('position', 'absolute')
+            star.style.setProperty('width', '2px')
+            star.style.setProperty('height', '2px')
+            star.style.setProperty('background-color', 'white')
+            let xy = getRandomPosition()
+            star.style.left = `${xy[0]}px`
+            star.style.top = `${ xy[1]}px`
+            element.appendChild(star)
+        }
+    }
+
+    function getRandomPosition() {
+        let y = document.body.scrollHeight
+        let x = document.body.scrollWidth
+        let randomY = Math.floor(Math.random() * y)
+        let randomX = Math.floor(Math.random() * x)
+        return [randomX, randomY]
+    }
+    
+    populateNav(vehicles)
+    
+    addStarField(document.querySelector('body'), 1000)
 
 function getLastNumber(url) {
     let end = url.lastIndexOf('/')
     let beginning = url.lastIndexOf('/', url.lastIndexOf('/')-1)
     return url.substring(beginning + 1, end)
+}
+
+export function removeChildren(container) {
+    while (container.firstChild) {
+        container.removeChild(container.firstChild)
+    }
 }

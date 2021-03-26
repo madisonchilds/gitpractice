@@ -2,10 +2,6 @@
     margin: 0;
 }
 
-#title {
-    padding: 1em;
-}
-
 #filmList {
     display: flex;
     flex-wrap: wrap;
