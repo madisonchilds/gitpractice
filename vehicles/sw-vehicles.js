@@ -4,7 +4,7 @@ console.log(vehicles.length)
 
 const nav = document.querySelector('nav')
 const navList = document.querySelector('.navList')
-const shipView = document.querySelector('.shipView')
+const vehicleView = document.querySelector('.vehicleView')
 
 const dialog = document.querySelector('.modal')
 const closeButton = document.querySelector('.modal-close')
@@ -24,6 +24,7 @@ function populateNav(vehicles) {
         anchorWrap.href = '#'
         anchorWrap.addEventListener('click', () => populateShipView(vehicle))
         let listItem = document.createElement('li')
+        console.log(`mmc: ${vehicle.name}`)
         listItem.textContent = vehicle.name
 
         anchorWrap.appendChild(listItem)
@@ -31,7 +32,7 @@ function populateNav(vehicles) {
     })
 }
 
-function populatevehicleView(vehicleData) {
+function populateVehicleView(vehicleData) {
     removeChildren(vehicleView)
     let vehicleNum = getLastNumber(vehicleData.url)
     let vehicleImage = document.createElement('img')
