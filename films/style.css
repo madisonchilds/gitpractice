@@ -12,14 +12,13 @@
     flex-wrap: wrap;
 }
 
+main {
+    display: flex;
+}
 .vehicleView {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.navList{
-    color: red;
 }
 
 nav {
@@ -47,8 +46,9 @@ a {
     color: white;
 }
 
-figure {
+figure > img {
     margin: 1em;
+    height: 200px;
 }
 
 figcaption {

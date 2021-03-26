@@ -24,13 +24,9 @@ function populateNav(vehicles) {
         anchorWrap.href = '#'
         anchorWrap.addEventListener('click', () => populateVehicleView(vehicle))
         let listItem = document.createElement('li')
-        console.log(`mmc: ${vehicle.name}`)
         listItem.textContent = vehicle.name
-
-        console.log(`mmc: anchorWrap ${anchorWrap}`)
-        console.log(`mmc: listItem ${listItem}`)
+        
         anchorWrap.appendChild(listItem)
-        console.log(`mmc: navList ${navList}`)
         navList.appendChild(anchorWrap)
     })
 }
