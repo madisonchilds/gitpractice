@@ -18,6 +18,10 @@
     align-items: center;
 }
 
+.navList{
+    color: red;
+}
+
 nav {
     width: 200px;
 }

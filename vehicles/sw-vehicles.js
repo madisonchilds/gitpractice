@@ -30,6 +30,7 @@ function populateNav(vehicles) {
         console.log(`mmc: anchorWrap ${anchorWrap}`)
         console.log(`mmc: listItem ${listItem}`)
         anchorWrap.appendChild(listItem)
+        console.log(`mmc: navList ${navList}`)
         navList.appendChild(anchorWrap)
     })
 }
