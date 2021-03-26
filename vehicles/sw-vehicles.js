@@ -1,10 +1,22 @@
-import { vehicles } from'../data/vehicles.js'
+import { vehicles } from '../data/vehicles.js'
 
 console.log(vehicles.length)
 
 const nav = document.querySelector('nav')
 const navList = document.querySelector('.navList')
 const vehicleView = document.querySelector('.vehicleView')
+
+const dialog = document.querySelector('.modal')
+const closeButton = document.querySelector('.modal-close')
+const modalBackground = document.querySelector('.modal-background')
+
+closeButton.addEventListener('click', () => {
+    dialog.classList.toggle("is-active")
+})
+
+modalBackground.addEventListener('click', () => {
+    dialog.classList.toggle("is-active")
+})
     
     function populateNav(vehicles) {
         vehicles.forEach((vehicle) => {
@@ -27,8 +39,9 @@ const vehicleView = document.querySelector('.vehicleView')
         vehicleImage.addEventListener('error', (err) => {
             console.log(`Oops! This image doesn't exist.`)
             vehicleImage.hidden = true
+            dialog.classList.toggle("is-active")
         })
-        vehicleView.appendChild(figImg)
+        vehicleView.appendChild(vehicleImage)
     }
 
     function addStarField(element, numStars) {
@@ -58,14 +71,14 @@ const vehicleView = document.querySelector('.vehicleView')
     
     addStarField(document.querySelector('body'), 1000)
 
-function getLastNumber(url) {
-    let end = url.lastIndexOf('/')
-    let beginning = url.lastIndexOf('/', url.lastIndexOf('/')-1)
-    return url.substring(beginning + 1, end)
-}
-
-export function removeChildren(container) {
-    while (container.firstChild) {
-        container.removeChild(container.firstChild)
+    function getLastNumber(url) {
+        let end = url.lastIndexOf('/')
+        let beginning = url.lastIndexOf('/', url.lastIndexOf('/')-1)
+        return url.substring(beginning + 1, end)
     }
-}
+
+    export function removeChildren(container) {
+        while (container.firstChild) {
+        container.removeChild(container.firstChild)
+        }
+    }

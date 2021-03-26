@@ -12,14 +12,34 @@
     flex-wrap: wrap;
 }
 
-#vehicleList {
+.vehicleView {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
+nav {
+    width: 200px;
+}
+
+img, nav {
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    text-align: center;
+    font-size: large;
+    font-weight: 600;
+}
 
 body {
     background-color: black;
+    color: white;
+}
+
+a {
+    text-decoration: none;
     color: white;
 }
 
