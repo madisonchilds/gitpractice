@@ -10,21 +10,21 @@ const vehicleView = document.querySelector('.vehicleView')
         vehicles.forEach((vehicle) => {
             let anchorWrap = document.createElement('a')
             anchorWrap.href = '#'
-            anchorWrap.addEventListener('click', () => getVehicles(vehicles))
+            anchorWrap.addEventListener('click', () => populateVehicleView(vehicles))
             let listItem = document.createElement('li')
-            listItem.textContent = vehicles.name
+            listItem.textContent = vehicle.name
     
             anchorWrap.appendChild(listItem)
             navList.appendChild(anchorWrap)
         })
     }
 
-    function getVehicles(vehicleData) {
+    function populateVehicleView(vehicleData) {
         removeChildren(vehicleView)
         let vehicleNum = getLastNumber(vehicleData.url)
-        let figImg = document.createElement('img')
-        figImg.src = `https://starwars-visualguide.com/assets/img/vehicles/${charNum}.jpg`
-        figImg.addEventListener('error', (err) => {
+        let vehicleImage = document.createElement('img')
+        vehicleImage.src = `https://starwars-visualguide.com/assets/img/vehicles/${vehicleNum}.jpg`
+        vehicleImage.addEventListener('error', (err) => {
             console.log(`Oops! This image doesn't exist.`)
             vehicleImage.hidden = true
         })
