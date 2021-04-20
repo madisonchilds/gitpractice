@@ -48,7 +48,7 @@ function populateCardFront(pokemon) {
     let frontLabel = document.createElement('p')
     frontLabel.textContent = pokemon.name
     let frontImage = document.createElement('img')
-    frontImage.src - getImageFileName(pokemon)
+    frontImage.src = `images/${getImageFileName(pokemon)}.png`
 
     pokeFront.appendChild(frontLabel)
     pokeFront.appendChild(frontImage)
@@ -70,5 +70,5 @@ function getImageFileName(pokemon) {
     } else if (pokemon.id > 9 && pokemon.id < 100) {
         return `0${pokemon.id}`
     }
-
+    return `https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/images/${pokeId}.png`
     }
