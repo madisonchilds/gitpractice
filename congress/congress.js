@@ -14,8 +14,10 @@ birthdayButton.addEventListener('click', () => {
 })
 
 function populateCongressGrid(simplePeople) {
+    removeChildren(congressGrid)
     simplePeople.forEach(person => {
         let personDiv = document.createElement('div')
+        personDiv.className = 'figureDiv'
         let personFig = document.createElement('figure')
         let figImg = document.createElement('img')
         let figCaption = document.createElement('figcaption')
@@ -32,11 +34,12 @@ function populateCongressGrid(simplePeople) {
 
 function getSimplifiedCongress(congressPeople) {
     return congressPeople.map(person => {
-        let middleName = person.middle_Name ? `${person.middle_name}` : ``
+        let middleName = person.middle_name ? `${person.middle_name}` : ``
         return {
             id: person.id,
+            title: person.title,
             name: `${person.first_name} ${middleName} ${person.last_name}`,
-            imgURL: `https://www.govtrack.us/static/legislator-photos/400050-100px.jpeg`
+            imgURL: `https://www.govtrack.us/static/legislator-photos/${person.govtrack_id}-100px.jpeg`,
         }
     })
 }
