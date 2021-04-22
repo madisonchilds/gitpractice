@@ -22,7 +22,6 @@ body {
 .scene {
   width: 200px;
   height: 260px;
-  border: 1px solid #CCC;
   margin: 20px 20px;
   perspective: 600px;
 }
@@ -64,7 +63,7 @@ body {
   color: white;
   font-family: 'Original Surfer', cursive;
   font-size: large;
-  padding-top: 15%;
+  padding-top: 18%;
   padding-left: 20px;
   transform: rotateY(180deg);
   text-align: left;
