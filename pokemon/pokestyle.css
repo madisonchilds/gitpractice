@@ -52,6 +52,7 @@ body {
   text-align: center;
   font-family: 'Original Surfer', cursive;
   font-size: large;
+  transition: 1s box-shadow;
 }
 
 .card_face--front img {
@@ -67,6 +68,280 @@ body {
   padding-left: 20px;
   transform: rotateY(180deg);
   text-align: left;
+}
+
+.card_face--front:hover {
+  box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
+}
+
+.card_face--front:hover.fire::before, .card_face--front:hover::after {
+  display: block; 
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  background: orangered;
+  z-index: -1;
+  animation: 1s clockwise infinite;
+}
+
+.card_face--front.fire:hover:after {
+  background: orange;
+  animation: 2s counterclockwise infinite;
+}
+
+.card_face--front.grass:hover::before, .card_face--front:hover::after {
+  display: block; 
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  background: green;
+  z-index: -1;
+  animation: 1s clockwise infinite;
+}
+
+.card_face--front.grass:hover:after {
+  background: lightgreen;
+  animation: 2s counterclockwise infinite;
+}
+
+.card_face--front.water:hover::before, .card_face--front:hover::after {
+  display: block; 
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  background: blue;
+  z-index: -1;
+  animation: 1s clockwise infinite;
+}
+
+.card_face--front.water:hover:after {
+  background: lightskyblue;
+  animation: 2s counterclockwise infinite;
+}
+
+.card_face--front.bug:hover::before, .card_face--front:hover::after {
+  display: block; 
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  background: cadetblue;
+  z-index: -1;
+  animation: 1s clockwise infinite;
+}
+
+.card_face--front.normal:hover:after {
+  background: burlywood;
+  animation: 2s counterclockwise infinite;
+}
+
+.card_face--front.normal:hover::before, .card_face--front:hover::after {
+  display: block; 
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  background: beige;
+  z-index: -1;
+  animation: 1s clockwise infinite;
+}
+
+.card_face--front.bug:hover:after {
+  background: cyan;
+  animation: 2s counterclockwise infinite;
+}
+
+.card_face--front.poison:hover::before, .card_face--front:hover::after {
+  display: block; 
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  background: red;
+  z-index: -1;
+  animation: 1s clockwise infinite;
+}
+
+.card_face--front.poison:hover:after {
+  background: pink;
+  animation: 2s counterclockwise infinite;
+}
+
+.card_face--front.electric:hover::before, .card_face--front:hover::after {
+  display: block; 
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  background: yellowgreen;
+  z-index: -1;
+  animation: 1s clockwise infinite;
+}
+
+.card_face--front.electric:hover:after {
+  background: yellow;
+  animation: 2s counterclockwise infinite;
+}
+
+.card_face--front.flying:hover::before, .card_face--front:hover::after {
+  display: block; 
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  background: darkmagenta;
+  z-index: -1;
+  animation: 1s clockwise infinite;
+}
+
+.card_face--front.flying:hover:after {
+  background: magenta;
+  animation: 2s counterclockwise infinite;
+}
+
+.card_face--front.fighting:hover::before, .card_face--front:hover::after {
+  display: block; 
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  background: crimson;
+  z-index: -1;
+  animation: 1s clockwise infinite;
+}
+
+.card_face--front.fighting:hover:after {
+  background: maroon;
+  animation: 2s counterclockwise infinite;
+}
+
+.card_face--front.ice:hover::before, .card_face--front:hover::after {
+  display: block; 
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  background: lightcyan;
+  z-index: -1;
+  animation: 1s clockwise infinite;
+}
+
+.card_face--front.ice:hover:after {
+  background: cyan;
+  animation: 2s counterclockwise infinite;
+}
+
+.card_face--front.ground:hover::before, .card_face--front:hover::after {
+  display: block; 
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  background: brown;
+  z-index: -1;
+  animation: 1s clockwise infinite;
+}
+
+.card_face--front.ground:hover:after {
+  background: tan;
+  animation: 2s counterclockwise infinite;
+}
+
+.card_face--front.fairy:hover::before, .card_face--front:hover::after {
+  display: block; 
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  background: palegreen;
+  z-index: -1;
+  animation: 1s clockwise infinite;
+}
+
+.card_face--front.fairy:hover:after {
+  background: seagreen;
+  animation: 2s counterclockwise infinite;
+}
+
+@keyframes clockwise {
+  0% {
+    top: -5px;
+    left: 0;
+  }
+  12% {
+    top: -2px;
+    left: 2px;
+  }
+  25% {
+    top: 0;
+    left: 5px;    
+  }
+  37% {
+    top: 2px;
+    left: 2px;
+  }
+  50% {
+    top: 5px;
+    left: 0;    
+  }
+  62% {
+    top: 2px;
+    left: -2px;
+  }
+  75% {
+    top: 0;
+    left: -5px;
+  }
+  87% {
+    top: -2px;
+    left: -2px;
+  }
+  100% {
+    top: -5px;
+    left: 0;    
+  }
+}
+
+@keyframes counterclockwise {
+  0% {
+    top: -5px;
+    right: 0;
+  }
+  12% {
+    top: -2px;
+    right: 2px;
+  }
+  25% {
+    top: 0;
+    right: 5px;    
+  }
+  37% {
+    top: 2px;
+    right: 2px;
+  }
+  50% {
+    top: 5px;
+    right: 0;    
+  }
+  62% {
+    top: 2px;
+    right: -2px;
+  }
+  75% {
+    top: 0;
+    right: -5px;
+  }
+  87% {
+    top: -2px;
+    right: -2px;
+  }
+  100% {
+    top: -5px;
+    right: 0;    
+  }
 }
 
 .grass {
@@ -94,7 +369,7 @@ body {
 }
 
 .electric {
-  box-shadow: 5px 5px 5px darksalmon;
+  box-shadow: 5px 5px 5px yellowgreen;
 }
 
 .poison {

@@ -145,6 +145,7 @@ function populateCardBack(pokemon) {
       backType.textContent = pokeType.type.name
       pokeBack.appendChild(backType)
     })
+
     let abilityLabel = document.createElement('h3')
     abilityLabel.textContent = "Abilities:"
     pokeBack.appendChild(abilityLabel)
@@ -153,6 +154,15 @@ function populateCardBack(pokemon) {
        ability.textContent = pokeAbility.ability.name
        pokeBack.appendChild(ability)
      })
+
+     /* let abilityLabel = document.createElement('div')
+    abilityLabel.textContent = "Ability Experience:"
+    pokeBack.appendChild(abilityLabel)
+     pokemon.abilities.forEach((pokeAbility) => {
+       let ability = document.createElement('p')
+       ability.textContent = pokeAbility.ability.base_experience
+       pokeBack.appendChild(ability)
+     }) */
     return pokeBack
 }
 
