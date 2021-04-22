@@ -68,13 +68,29 @@ body{
     margin: 1em;
 }
 
-figure{
-    margin: 1em;
+p {
+    text-align: center;
+    color: var(--dark-blue)
 }
 
 figcaption {
     text-align: center;
     color: var(--dark-blue);
+    font-size: large;
+    font-weight: bold;
+}
+
+a.project-tile:hover {
+    background-color: var(--light-blue);
+    color: white;
+}
+
+a.project-tile p:hover {
+    color: white;
+}
+
+figure{
+    margin: 1em;
 }
 
 figcaption > span{
