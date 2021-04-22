@@ -68,11 +68,6 @@ body{
     margin: 1em;
 }
 
-p {
-    text-align: center;
-    color: var(--dark-blue)
-}
-
 figcaption {
     text-align: center;
     color: var(--dark-blue);
