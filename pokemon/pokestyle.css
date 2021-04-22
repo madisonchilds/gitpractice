@@ -95,3 +95,11 @@ body { font-family: sans-serif; }
 .ice {
   box-shadow: 5px 5px 5px lightcyan;
 }
+
+.ground {
+  box-shadow: 5px 5px 5px brown;
+}
+
+.fairy {
+  box-shadow: 5px 5px 5px palegreen;
+}

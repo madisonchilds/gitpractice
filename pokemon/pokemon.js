@@ -72,7 +72,6 @@ function loadPage() {
 }
 
 function populatePokeCard(singlePokemon) {
-    // console.log(singlePokemon)
     let pokeScene = document.createElement('div')
     pokeScene.className = 'scene'
     let pokeCard = document.createElement('div')
@@ -112,13 +111,20 @@ function populateCardBack(pokemon) {
     let pokeType = pokemon.types[0].type.name
     pokeBack.classList.add(pokeType)
 
-    // pokeBack.style.setProperty('background', `linear-gradient(darkpurple, purple)`)
-
     pokemon.types.forEach((pokeType) => {
         let backType = document.createElement('p')
         backType.textContent = pokeType.type.name
         pokeBack.appendChild(backType)
     })
+
+    /* let pokeSpecies = pokemon.species[0].species.name
+    pokeFront.classList.add(pokeSpecies)
+
+    pokemon.species.forEach((pokeSpecies) => {
+        let backSpecies = document.createElement('p')
+        backSpecies.textContent = pokeSpecies.species.name
+        pokeBack.appendChild(backSpecies)
+    }) */
     return pokeBack
 }
 
