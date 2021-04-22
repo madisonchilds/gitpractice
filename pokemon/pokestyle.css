@@ -41,10 +41,18 @@ transform-style: preserve-3d;
 }
 
 .card_face--front {
-  background: red;
+  background: #ADD8E6;
+  text-align: center;
+}
+
+.card_face--front img {
+  height: 190px;
+  weight: 190px;
 }
 
 .card_face--back {
-  background: blue;
+  background: #8A38D6;
+  color: white;
   transform: rotateY(180deg);
+  text-align: center;
 }
