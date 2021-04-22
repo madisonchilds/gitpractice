@@ -4,13 +4,13 @@ const fetchButton = document.querySelector('#fetchSelectedPokemon')
 const newButton = document.querySelector('#newPokemon')
 
 class Pokemon {
-    constructor(name, height, weight, abilities, moves, types) {
+    constructor(name, height, weight, abilities, move, types) {
       this.id = 900
       this.name = name
       this.height = height
       this.weight = weight
       this.abilities = abilities
-      this.moves = moves
+      this.moves = move
       this.types = types
     }
   }
@@ -19,12 +19,19 @@ class Pokemon {
     let pokeName = prompt('What is the name of your new Pokemon?')
     let pokeHeight = prompt('Pokemon height?')
     let pokeWeight = prompt('Pokemon weight?')
+    let pokeAbilities = prompt('What are the abilities of your Pokemon?')
+    let pokeMove = prompt('Best moves?')
+    let abilitiesArray = getAbilitiesArray(pokeAbilities)
     let newPokemon = new Pokemon(
       pokeName,
       pokeHeight,
       pokeWeight,
-      ['eat', 'sleep'],
-      ['study', 'game'],
+      abilitiesArray,
+      [{
+          move: {
+              name: pokeMove
+          }
+      }],
       [
         {
           type: {
@@ -35,6 +42,17 @@ class Pokemon {
     )
     populatePokeCard(newPokemon)
   })
+
+  function getAbilitiesArray(commaString) {
+      let tempArray = commaString.split(',')
+      return tempArray.map((abilityName) => {
+          return {
+              ability: {
+              name: abilityName
+          }
+        }
+      })
+
 
 loadButton.addEventListener('click', () => {
     loadPage()
@@ -115,16 +133,14 @@ function populateCardBack(pokemon) {
         let backType = document.createElement('p')
         backType.textContent = pokeType.type.name
         pokeBack.appendChild(backType)
+        
     })
 
-    /* let pokeSpecies = pokemon.species[0].species.name
-    pokeFront.classList.add(pokeSpecies)
-
-    pokemon.species.forEach((pokeSpecies) => {
-        let backSpecies = document.createElement('p')
-        backSpecies.textContent = pokeSpecies.species.name
-        pokeBack.appendChild(backSpecies)
-    }) */
+    pokemon.abilities.forEach(pokeAbility => {
+        let backAbility = document.createElement('p')
+        backAbility.textContent = pokeAbility.ability.name
+        pokeBack.appendChild(backAbility)
+    })
     return pokeBack
 }
 
