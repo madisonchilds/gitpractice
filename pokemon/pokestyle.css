@@ -52,10 +52,12 @@ body {
   font-family: 'Original Surfer', cursive;
   font-size: large;
   transition: 1s box-shadow;
+  padding: 10px;
 }
 
 .card_face--front img {
-  height: 190px;
+  height: 180px;
+  padding: 5px;
 }
 
 .card_face--back {
