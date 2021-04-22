@@ -16,15 +16,15 @@ body { font-family: sans-serif; }
   width: 200px;
   height: 260px;
   border: 1px solid #CCC;
-  margin: 40px 0;
+  margin: 20px 20px;
   perspective: 600px;
 }
 
 .card {
   width: 100%;
   height: 100%;
-  transition: transform 1s;
-transform-style: preserve-3d;
+  transition: transform .8s;
+  transform-style: preserve-3d;
   cursor: pointer;
   position: relative;
 }
@@ -47,52 +47,51 @@ transform-style: preserve-3d;
 
 .card_face--front img {
   height: 190px;
-  weight: 190px;
 }
 
 .card_face--back {
-  background: #8A38D6;
+  background: linear-gradient(#8A38D6, #e9c6ff);
   color: white;
   transform: rotateY(180deg);
   text-align: center;
 }
 
 .grass {
- box-shadow: 10px 5px 5px green;
+ box-shadow: 5px 5px 5px green;
 }
 
 .fire {
-  box-shadow: 10px 5px 5px orangered;
+  box-shadow: 5px 5px 5px orangered;
 }
 
 .water {
-  box-shadow: 10px 5px 5px blue;
+  box-shadow: 5px 5px 5px blue;
 }
 
 .bug {
-  box-shadow: 10px 5px 5px cadetblue;
+  box-shadow: 5px 5px 5px cadetblue;
 }
 
 .normal {
-  box-shadow: 10px 5px 5px burlywood;
+  box-shadow: 5px 5px 5px burlywood;
 }
 
 .flying {
-  box-shadow: 10px 5px 5px darkmagenta;
+  box-shadow: 5px 5px 5px darkmagenta;
 }
 
 .electric {
-  box-shadow: 10px 5px 5px darksalmon;
+  box-shadow: 5px 5px 5px darksalmon;
 }
 
 .poison {
-  box-shadow: 10px 5px 5px red;
+  box-shadow: 5px 5px 5px red;
 }
 
 .fighting {
-  box-shadow: 10px 5px 5px crimson;
+  box-shadow: 5px 5px 5px crimson;
 }
 
 .ice {
-  box-shadow: 10px 5px 5px lightcyan;
+  box-shadow: 5px 5px 5px lightcyan;
 }

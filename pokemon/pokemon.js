@@ -112,6 +112,8 @@ function populateCardBack(pokemon) {
     let pokeType = pokemon.types[0].type.name
     pokeBack.classList.add(pokeType)
 
+    // pokeBack.style.setProperty('background', `linear-gradient(darkpurple, purple)`)
+
     pokemon.types.forEach((pokeType) => {
         let backType = document.createElement('p')
         backType.textContent = pokeType.type.name
