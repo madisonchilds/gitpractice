@@ -27,11 +27,13 @@ class Pokemon {
       pokeHeight,
       pokeWeight,
       abilitiesArray,
-      [{
+      [
+          {
           move: {
               name: pokeMove
           }
-      }],
+      }
+    ],
       [
         {
           type: {
@@ -44,14 +46,15 @@ class Pokemon {
   })
 
   function getAbilitiesArray(commaString) {
-      let tempArray = commaString.split(',')
-      return tempArray.map((abilityName) => {
-          return {
-              ability: {
-              name: abilityName
-          }
+    let tempArray = commaString.split(',')
+    return tempArray.map((abilityName) => {
+      return {
+        ability: {
+          name: abilityName
         }
-      })
+      }
+    })
+  }
 
 
 loadButton.addEventListener('click', () => {
@@ -111,6 +114,10 @@ function populateCardFront(pokemon) {
     let frontImage = document.createElement('img')
     frontImage.src = getImageFileName(pokemon)
 
+    frontImage.addEventListener('error', (err) =>{
+        frontImage.src = 'images/pokeball.png'
+    })
+
     let pokeType = pokemon.types[0].type.name
     pokeFront.classList.add(pokeType)
 
@@ -129,18 +136,23 @@ function populateCardBack(pokemon) {
     let pokeType = pokemon.types[0].type.name
     pokeBack.classList.add(pokeType)
 
+    let typeLabel = document.createElement('h3')
+    typeLabel.textContent = "Types:"
+    pokeBack.appendChild(typeLabel)
+  
     pokemon.types.forEach((pokeType) => {
-        let backType = document.createElement('p')
-        backType.textContent = pokeType.type.name
-        pokeBack.appendChild(backType)
-        
+      let backType = document.createElement('p')
+      backType.textContent = pokeType.type.name
+      pokeBack.appendChild(backType)
     })
-
-    pokemon.abilities.forEach(pokeAbility => {
-        let backAbility = document.createElement('p')
-        backAbility.textContent = pokeAbility.ability.name
-        pokeBack.appendChild(backAbility)
-    })
+    let abilityLabel = document.createElement('h3')
+    abilityLabel.textContent = "Abilities:"
+    pokeBack.appendChild(abilityLabel)
+     pokemon.abilities.forEach((pokeAbility) => {
+       let ability = document.createElement('p')
+       ability.textContent = pokeAbility.ability.name
+       pokeBack.appendChild(ability)
+     })
     return pokeBack
 }
 
