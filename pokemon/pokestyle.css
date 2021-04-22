@@ -56,3 +56,43 @@ transform-style: preserve-3d;
   transform: rotateY(180deg);
   text-align: center;
 }
+
+.grass {
+ box-shadow: 10px 5px 5px green;
+}
+
+.fire {
+  box-shadow: 10px 5px 5px orangered;
+}
+
+.water {
+  box-shadow: 10px 5px 5px blue;
+}
+
+.bug {
+  box-shadow: 10px 5px 5px cadetblue;
+}
+
+.normal {
+  box-shadow: 10px 5px 5px burlywood;
+}
+
+.flying {
+  box-shadow: 10px 5px 5px darkmagenta;
+}
+
+.electric {
+  box-shadow: 10px 5px 5px darksalmon;
+}
+
+.poison {
+  box-shadow: 10px 5px 5px red;
+}
+
+.fighting {
+  box-shadow: 10px 5px 5px crimson;
+}
+
+.ice {
+  box-shadow: 10px 5px 5px lightcyan;
+}
