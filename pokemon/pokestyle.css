@@ -150,6 +150,22 @@ body {
   animation: 1s clockwise infinite;
 }
 
+.card_face--front.ghost:hover:after {
+  background:dimgray;
+  animation: 2s counterclockwise infinite;
+}
+
+.card_face--front.ghost:hover::before, .card_face--front:hover::after {
+  display: block; 
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  background: darkslategray;
+  z-index: -1;
+  animation: 1s clockwise infinite;
+}
+
 .card_face--front.bug:hover:after {
   background: cyan;
   animation: 2s counterclockwise infinite;
@@ -391,4 +407,8 @@ body {
 
 .fairy {
   box-shadow: 5px 5px 5px palegreen;
+}
+
+.ghost {
+  box-shadow: 5px 5px 5px darkslategray;
 }
