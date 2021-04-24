@@ -66,6 +66,7 @@ body{
 
 .project-tile {
     margin: 1em;
+    
 }
 
 figcaption {
@@ -77,11 +78,6 @@ figcaption {
 
 a.project-tile:hover {
     background-color: var(--light-blue);
-    color: white;
-}
-
-a.project-tile p:hover {
-    color: white;
 }
 
 figure{
