@@ -19,7 +19,6 @@ for (let i = 0; i < films.length; i++) {
 }
 
 
-
 function getLastNumber(url) {
     let end = url.lastIndexOf('/')
     let beginning = url.lastIndexOf('/', url.lastIndexOf('/')-1)

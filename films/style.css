@@ -15,14 +15,25 @@
 main {
     display: flex;
 }
+
+.title {
+    font-family: 'Luckiest Guy', cursive;
+    text-align: center;
+    font-size: 3rem;
+    color: black;
+    -webkit-text-stroke: 1px yellow;
+}
+
 .vehicleView {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
 nav {
     width: 200px;
+
 }
 
 img, nav {
@@ -56,4 +67,11 @@ figcaption {
     background-color: black;
     color: #fff;
 
+}
+
+footer {
+    text-align: center;
+    background-color: yellow;
+    color: black;
+    padding: 10px;
 }
