@@ -23,7 +23,7 @@ body {
 .figureDiv {
     padding: 0;
     margin: 10px;
-    box-shadow: 5px 5px 5px black;
+    box-shadow: 5px 5px 5px blue;
 }
 
 figure {
@@ -35,3 +35,10 @@ figcaption {
     text-align: center;
     width: 100px;
 }
+
+.figureDiv:hover{
+    /* box-shadow: 5px 5px 5px darkred; */
+    background-color: darkred;
+    color: white;
+}
+
